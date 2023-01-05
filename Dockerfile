@@ -10,5 +10,4 @@ RUN mvn clean package -Pprod -DskipTests
 #
 FROM openjdk:11-jdk-slim
 EXPOSE 8080
-COPY  --from=build target/docker-user-mgmt-1.0.0.jar UserManagement-0.0.1-SNAPSHOT.jar
-CMD [java,-jar,/UserManagement-0.0.1-SNAPSHOT.jar]
+RUN echo 'we are running some # of cool things'
